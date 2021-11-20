@@ -30,6 +30,10 @@ public Optional<Formation> getFormationById(long id)
 {
 return  formationRepository.findById(id);	
 }
+public List<Formation> getFormationByFormateur(String formateur)
+{
+	return formationRepository.findByformateur(formateur);
+}
 public ResponseEntity<?> deleteFormation(long id)
 {
 	 Formation formation = formationRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("formation","id",id) );

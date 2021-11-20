@@ -34,6 +34,12 @@ public Optional<Formation> getFormationsById(@PathVariable long id)
 {
 	return formationService.getFormationById(id);
 }
+@GetMapping("formationby/{formateur}")
+public List<Formation> getFormationByFormateur(@PathVariable String formateur)
+{
+	return formationService.getFormationByFormateur(formateur);
+	
+}
 
 
 @DeleteMapping("/formation/{id}")
