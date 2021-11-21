@@ -8,4 +8,5 @@ import com.pr.model.Formation;
 
 public interface FormationRepository extends JpaRepository<Formation, Long> {
 List<Formation> findByformateur(String formateur);
+
 }
